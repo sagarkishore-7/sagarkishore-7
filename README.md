@@ -2,7 +2,7 @@
 
 <!-- ANIMATED TYPING HEADER -->
 ### Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
-# I'm Sagar Kishore Kumar
+# I'm Sagar Kishore
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&repeat=true&width=500&height=45&lines=Cybersecurity+Engineer;Email+Security+Analyst;CTI+Researcher;LLM+Security+Pipeline+Builder" alt="Typing SVG" /></a>
 
