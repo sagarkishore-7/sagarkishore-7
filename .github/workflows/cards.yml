@@ -1,0 +1,89 @@
+name: Refresh Stats Cards
+
+# Cards are generated into this repo rather than embedded from a hosted
+# instance: the old github-readme-stats public instance went down
+# (DEPLOYMENT_PAUSED) and took every stats and pin card on this profile with
+# it. Committed SVGs cannot 503.
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # daily
+  workflow_dispatch:
+
+env:
+  # keep in sync with assets/hero-dark.svg and the site palette
+  THEME: bg_color=050807&title_color=00ff9d&text_color=d7e6df&icon_color=00ff9d&border_color=0f1716&disable_animations=true
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Stats
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&rank_icon=github&ring_color=00ff9d&hide=issues,contribs&${{ env.THEME }}
+          path: assets/cards/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      # Security-Testing is CISPA fuzzing coursework holding ~10.5 MB of
+      # vendored C targets. Left in, it reports C at 64% and buries Python.
+      - name: Top languages
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&exclude_repo=Security-Testing&${{ env.THEME }}
+          path: assets/cards/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Pin EduThreat-CTI
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=EduThreat-CTI&${{ env.THEME }}
+          path: assets/cards/pin-EduThreat-CTI.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Pin LLMMap
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=LLMMap&${{ env.THEME }}
+          path: assets/cards/pin-LLMMap.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Pin Web-Recon-eXecutive
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=Web-Recon-eXecutive&${{ env.THEME }}
+          path: assets/cards/pin-Web-Recon-eXecutive.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Pin Eidolon
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=${{ github.repository_owner }}&repo=Eidolon&${{ env.THEME }}
+          path: assets/cards/pin-Eidolon.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Commit refreshed cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cards/*.svg
+          git diff --staged --quiet || git commit -m "chore: refresh stats cards"
+          git push
