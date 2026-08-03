@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 6" width="1200" height="6" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="d" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0a9e6c" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#0a9e6c" stop-opacity="0.55"/>
+      <stop offset="85%"  stop-color="#0a9e6c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0a9e6c" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00ff9d" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#00ff9d" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- #0a9e6c reads on both GitHub themes, so one file covers dark and light -->
+  <rect y="2.5" width="1200" height="1" fill="url(#d)"/>
+  <rect y="2" width="180" height="2" fill="url(#p)">
+    <animate attributeName="x" values="-180;1200" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>

@@ -17,9 +17,10 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # palette matches assets/hero-dark.svg and sagarkishore.com
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.svg?color_snake=%230a9e6c&color_dots=%23e8f5ef,%23a5e0c6,%2352c79b,%230a9e6c,%23065f41
+            dist/github-snake-dark.svg?color_snake=%2300ff9d&color_dots=%230f1716,%23064e35,%230a9e6c,%2300d97f,%2300ff9d
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
