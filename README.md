@@ -85,11 +85,7 @@ off_hours: Dota 2, and a basketball court
 <tr>
 <td width="50%" valign="top">
 
-<a href="https://github.com/sagarkishore-7/EduThreat-CTI"><img alt="EduThreat-CTI" src="https://raw.githubusercontent.com/sagarkishore-7/sagarkishore-7/main/assets/cards/pin-EduThreat-CTI.svg" width="100%"></a>
-
-Automated OSINT threat-intelligence platform for the education sector, covering 2000–2026. 15 sources distilled **124,676 raw observations into 2,967 verified incidents across 91 countries**, via schema-constrained LLM extraction into a 132-field CTI schema and deterministic multi-signal canonicalisation. Blind expert validation put ransomware-vs-rest classification at **91% accuracy**.
-
-<a href="https://edu-threat-cti-dashboard.vercel.app"><img alt="Live dashboard" src="https://img.shields.io/badge/▸%20live%20dashboard-0a7d55?style=flat-square&logoColor=ffffff"></a> <img alt="Python" src="https://img.shields.io/badge/Python-050807?style=flat-square&logo=python&logoColor=00FF9D"> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI%20·%2073%20endpoints-050807?style=flat-square&logo=fastapi&logoColor=00FF9D"> <img alt="Next.js" src="https://img.shields.io/badge/Next.js-050807?style=flat-square&logo=nextdotjs&logoColor=00FF9D">
+Automated OSINT threat-intelligence platform for the education sector. Multi-source ingestion with schema-constrained LLM extraction into a typed CTI schema, deterministic multi-signal canonicalisation, and blind expert validation of the classifier. *Details available on request while the work is under peer review.*
 
 </td>
 <td width="50%" valign="top">
@@ -130,7 +126,7 @@ Defensive, OSINT-calibrated password-risk research: measuring how much your publ
 
 | | | |
 |:--|:--|:--|
-| **Cyber Threat Intelligence Researcher** <br> <sub>CISPA Helmholtz Center for Information Security</sub> | <sub>Oct 2024 — Oct 2025</sub> | Built EduThreat-CTI end to end: 15-source OSINT ingestion → **2,967 verified incidents across 91 countries**; automated MITRE ATT&CK mapping and a threat knowledge graph linking **213 threat actors**, CVEs and vendors; measurement study quantifying supply-chain amplification (one MOVEit breach cascaded to 93 institutions). |
+| **Cyber Threat Intelligence Researcher** <br> <sub>CISPA Helmholtz Center for Information Security</sub> | <sub>Oct 2024 — Oct 2025</sub> | Built an end-to-end OSINT threat-intelligence pipeline: multi-source ingestion, automated MITRE ATT&CK mapping, and a threat knowledge graph linking actors, CVEs and vendors; measurement study quantifying supply-chain amplification. |
 | **Email Security Analyst** · NGSF <br> <sub>1&1 Mail & Media SE</sub> | <sub>Jan 2023 — Aug 2025</sub> | LLM-driven spam and phishing classification at **~350K emails/day** on infrastructure carrying **~4B/week**; brand-impersonation detection across IONOS, GMX and WEB.DE; detections-as-code. |
 | **Test Development Engineer** <br> <sub>Wipro Limited</sub> | <sub>Nov 2020 — Sep 2021</sub> | Automated test and data-validation frameworks for enterprise cloud applications, cutting manual QA cycles by **25%**. |
 

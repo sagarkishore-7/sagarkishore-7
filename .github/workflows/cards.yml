@@ -44,15 +44,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Pin EduThreat-CTI
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=${{ github.repository_owner }}&repo=EduThreat-CTI&${{ env.THEME }}
-          path: assets/cards/pin-EduThreat-CTI.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
-
       - name: Pin LLMMap
         uses: stats-organization/github-readme-stats-action@v2
         with:
