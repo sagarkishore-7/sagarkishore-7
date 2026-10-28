@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Sagar Kishore&#39;s GitHub Stats, Rank: B</title>
-        <desc id="descId">Total Stars Earned: 3, Total Commits  : 2482, Total PRs: 1335</desc>
+        <desc id="descId">Total Stars Earned: 3, Total Commits  : 2491, Total PRs: 1348</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 139.06783612301425;
+        stroke-dashoffset: 139.0212080911003;
       }
     }
   
